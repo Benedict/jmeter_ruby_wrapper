@@ -1,8 +1,0 @@
-Loaded suite tork-worker[0] test/unit/command_line_generator_test
-Started
-.
-Finished in 0.000394 seconds.
-
-1 tests, 1 assertions, 0 failures, 0 errors, 0 skips
-
-Test run options: --seed 13863
