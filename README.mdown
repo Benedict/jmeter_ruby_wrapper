@@ -1,4 +1,5 @@
-= Jmeter wrapper
+Jmeter wrapper
+==============
 
 Starting Jmeter is really annoying. And I am really lazy. I heard this somewhere.. Why spend five minutes doing something you can spend ten years automating? Granted, the next best thing is getting paid for ten years automating it.
 
