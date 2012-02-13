@@ -4,7 +4,7 @@ class CommandLineGeneratorTest < Test::Unit::TestCase
 
   def test_the_command_line_has_nongui_option
     clg = Jmeter::CommandLineGenerator.new
-    assert_equal "jmeter -n", clg.command
+    assert_equal "jmeter -n", clg.base_command
   end
 
   def test_accepts_the_name_of_a_profile

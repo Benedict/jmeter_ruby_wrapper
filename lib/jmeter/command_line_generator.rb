@@ -1,3 +1,5 @@
+require 'socket'
+
 module Jmeter
   class CommandLineGenerator
     def initialize args={}
@@ -5,7 +7,7 @@ module Jmeter
       @guid = args[:guid]
     end
 
-    def command
+    def base_command
       "jmeter -n"
     end
 
@@ -16,5 +18,15 @@ module Jmeter
     def output_file
       "-l#{@guid}_#{@profile}.log "
     end
+
+    #Yep, this isn't tested, because it's just standard Ruby.
+    def next_available_local_port
+      socket = Socket.new(:INET, :STREAM, 0)
+      socket.bind(Addrinfo.tcp("127.0.0.1", 0))
+      port = socket.local_address.ip_port
+      socket.close
+      port
+    end
+
   end
 end
