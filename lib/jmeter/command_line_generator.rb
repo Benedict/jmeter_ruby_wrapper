@@ -20,7 +20,7 @@ module Jmeter
     end
 
     #Yep, this isn't tested, because it's just standard Ruby.
-    def next_available_local_port
+    def random_available_local_port
       socket = Socket.new(:INET, :STREAM, 0)
       socket.bind(Addrinfo.tcp("127.0.0.1", 0))
       port = socket.local_address.ip_port
