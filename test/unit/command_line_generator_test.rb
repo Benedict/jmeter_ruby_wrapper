@@ -31,4 +31,10 @@ class CommandLineGeneratorTest < Test::Unit::TestCase
     assert_equal "-Gduration=#{duration}", clg.duration
   end
 
+  def test_takes_a_number_of_threads
+    threads = 3000
+    clg = Jmeter::CommandLineGenerator.new :threads => threads
+    assert_equal "-Gthreads=#{threads}", clg.threads
+  end
+
 end

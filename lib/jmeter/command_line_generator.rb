@@ -6,6 +6,7 @@ module Jmeter
       @plan = args[:plan]
       @guid = args[:guid]
       @duration = args[:duration]
+      @threads = args[:threads]
     end
 
     def base_command
@@ -26,6 +27,10 @@ module Jmeter
 
     def duration
       "-Gduration=#{@duration}"
+    end
+
+    def threads
+      "-Gthreads=#{@threads}"
     end
 
     #Yep, this isn't tested, because it's just standard Ruby.
