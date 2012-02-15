@@ -3,24 +3,29 @@ require 'socket'
 module Jmeter
   class CommandLineGenerator
     def initialize args={}
-      @profile = args[:profile]
+      @plan = args[:plan]
       @guid = args[:guid]
+      @duration = args[:duration]
     end
 
     def base_command
       "jmeter -n"
     end
 
-    def profile
-      "-t#{@profile}.jmx "
+    def plan
+      "-t#{@plan}.jmx "
     end
 
     def output_file
-      "-l#{@guid}_#{@profile}.log "
+      "-l#{@guid}_#{@plan}.log "
     end
 
     def main_log
       "-j#{@guid}_jmeter.log "
+    end
+
+    def duration
+      "-Gduration=#{@duration}"
     end
 
     #Yep, this isn't tested, because it's just standard Ruby.
