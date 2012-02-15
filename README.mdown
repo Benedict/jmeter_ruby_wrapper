@@ -1,6 +1,14 @@
-Jmeter wrapper
-==============
+# Jmeter wrapper
 
-Starting Jmeter is really annoying. And I am really lazy. I heard this somewhere.. Why spend five minutes doing something you can spend ten years automating? Granted, the next best thing is getting paid for ten years automating it.
+## Vision
 
-So the goal is to allow this to start an instance of Jmeter through a really simple configuration. No, really. Stop laughing, that's quite rude of you.
+This is not meant for single-user, command-line usage. It's meant to be used in scripts - to provide a more easily programmable, user-friendly, readable API to jmeter. In Ruby.
+
+
+## Product
+
+This must be able to launch Jmeter, whether a single instance or many slaves, and dynamically support the possible -D and -G options which can change the behavior of the jmeter profile if set by the user. System-level constraints, like SSH keys, are probably implementation details
+
+### Versions, features
+
+Examine github. Bug @Trevoke.
