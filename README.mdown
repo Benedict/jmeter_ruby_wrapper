@@ -13,6 +13,14 @@ This must be able to launch Jmeter, whether a single instance or many slaves, an
 
 Examine github. Bug @Trevoke.
 
+Example of usage (object names are not marked in stone):
+
+```ruby
+jmeter = Jmeter::Wrapper.new :plan => 'TestPlan.jmx', :threads => 1000, :duration => 300, :remote_servers => ['remote1', 'remote2']
+jmeter.start # => possibly replaces the current process with the jmeter process - or daemonizes it. This process does not need to exist anymore.
+```
+
+
 ### Constraints
 
 The following options are passed as command-line options and must be stored as User-defined variables in jmeter, like such:
