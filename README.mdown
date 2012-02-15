@@ -12,3 +12,14 @@ This must be able to launch Jmeter, whether a single instance or many slaves, an
 ### Versions, features
 
 Examine github. Bug @Trevoke.
+
+### Constraints
+
+The following options are passed as command-line options and must be stored as User-defined variables in jmeter, like such:
+```
+${__P(duration,1800)}
+```
+* duration (in seconds)
+* target_host
+* rampup
+* delay
